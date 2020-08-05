@@ -2,9 +2,9 @@ package healthcheck
 
 type Result struct {
 	Status   Status
-	Msgs     *Infos
-	Errors   *Infos
-	Warnings *Infos
+	Msgs     *Infos `json:",omitempty"`
+	Errors   *Infos `json:",omitempty"`
+	Warnings *Infos `json:",omitempty"`
 }
 
 func (r *Result) StatusCode() int {
